@@ -38,7 +38,7 @@ workflow Sync-Parallel() {
     foreach -parallel ($each in $sync_list) {
         # foreach ($each in $sync_list) {
         Start-Sleep -s 3
-        $datetime = (Get-Date -Format s).Replace("-", "").Replace(":", "")
+        $datetime = (Get-Date -Format O).Replace("-", "").Replace(":", "")
         $log_file_name = "work-${datetime}-__BOUNOKI-TOOL-TH-ID__.log"
         $log_path = (Join-Path $log_dir_name $log_file_name)
 
